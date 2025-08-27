@@ -80,7 +80,7 @@ function Contact() {
             <div className="mt-4">
               <p>
                 <FaMapMarkerAlt className="me-2 text-primary" />
-                <strong>Location:</strong>{" "}
+                <strong>Current Location:</strong>{" "}
                 <a
                   href="https://www.google.com/maps?q=Ahmedabad,India"
                   target="_blank"
@@ -88,6 +88,19 @@ function Contact() {
                   style={{ color: "#fff", textDecoration: "none" }}
                 >
                   Ahmedabad, India
+                </a>
+              </p>
+
+              <p>
+                <FaMapMarkerAlt className="me-2 text-primary" />
+                <strong>Permanent Location:</strong>{" "}
+                <a
+                  href="https://www.google.com/maps/place/Kariya,+Gujarat+362030"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "#fff", textDecoration: "none" }}
+                >
+                  Junagadh, India
                 </a>
               </p>
 
