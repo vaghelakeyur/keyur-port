@@ -20,7 +20,12 @@ function Contact() {
     const templateParams = { subject, name, number, email, message };
 
     email.js
-      .send("service_46sn5en", "template_5loujwb", templateParams, "203QGSGtMzBwz4_5f")
+      .send(
+        "service_46sn5en",
+        "template_5loujwb",
+        templateParams,
+        "203QGSGtMzBwz4_5f"
+      )
       .then(() => {
         toast.success("Email Send SuccessFully..!");
 
@@ -75,15 +80,37 @@ function Contact() {
             <div className="mt-4">
               <p>
                 <FaMapMarkerAlt className="me-2 text-primary" />
-                <strong>Location:</strong> Ahmedabad, India
+                <strong>Location:</strong>{" "}
+                <a
+                  href="https://www.google.com/maps?q=Ahmedabad,India"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "#fff", textDecoration: "none" }}
+                >
+                  Ahmedabad, India
+                </a>
               </p>
+
               <p>
                 <FaEnvelope className="me-2 text-danger" />
-                <strong>Email:</strong> keyurvaghela62@gmail.com
+                <strong>Email:</strong>{" "}
+                <a
+                  href="mailto:keyurvaghela62@gmail.com"
+                  style={{ color: "#fff", textDecoration: "none" }}
+                >
+                  keyurvaghela62@gmail.com
+                </a>
               </p>
+
               <p>
                 <FaPhone className="me-2 text-success" />
-                <strong>Phone:</strong> +91 90161 60151
+                <strong>Phone:</strong>{" "}
+                <a
+                  href="tel:+919016160151"
+                  style={{ color: "#fff", textDecoration: "none" }}
+                >
+                  +91 90161 60151
+                </a>
               </p>
             </div>
           </motion.div>
