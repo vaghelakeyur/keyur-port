@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaInstagram, FaWhatsapp, FaGithub, FaFacebook } from 'react-icons/fa';
+import { FaWhatsapp, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 function Navbar() {
   const [scroll, setScroll] = useState(false);
@@ -37,10 +37,9 @@ function Navbar() {
 
           {/* Right: Social Icons */}
           <div className="d-none d-lg-flex social-icons">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
             <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
             <a href="https://github.com" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
           </div>
 
           {/* Mobile Toggle Button */}
@@ -69,10 +68,9 @@ function Navbar() {
             </li>
           ))}
           <li className="mt-3 social-icons-mobile">
-            <a href="https://instagram.com"><FaInstagram /></a>
-            <a href="https://wa.me/1234567890"><FaWhatsapp /></a>
-            <a href="https://github.com"><FaGithub /></a>
-            <a href="https://facebook.com"><FaFacebook /></a>
+            <a href="https://wa.me/9016160151"><FaWhatsapp /></a>
+            <a href="https://github.com/vaghelakeyur"><FaGithub /></a>
+            <a href="https://www.linkedin.com/in/keyur-vaghela-9b633b275"><FaLinkedin /></a>
           </li>
         </ul>
       </div>
