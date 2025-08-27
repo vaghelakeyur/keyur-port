@@ -9,7 +9,6 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ProjectDetails from './pages/ProjectDetails';
 import StatsSection from './components/StatsSection';
-import ParticlesBackground from './components/ParticlesBackground';
 import AOS from 'aos';
 import Loader from './components/Loader';
 import { AnimatePresence } from 'framer-motion';
@@ -48,7 +47,6 @@ function App() {
             <div className="background-overlay"></div>
 
             {/* Particles (still on top of video) */}
-            <ParticlesBackground />
 
             <Routes>
               <Route
