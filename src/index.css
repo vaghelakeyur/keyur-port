@@ -1,0 +1,420 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  margin: 0;
+  scroll-behavior: smooth;
+  position: relative; /* needed so ::before can attach */
+  z-index: 0;
+     background-color: #0a192f;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/src/assets/img/5166950.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px);    
+  transform: scale(1.1); 
+  z-index: -1;           
+} */
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes it behave like a background image */
+  z-index: -2; /* Behind everything */
+  filter: blur(1px); /* Optional blur effect like your image background */
+  transform: scale(1.1); /* Prevent edges cut-off */
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Optional dark overlay for better text contrast */
+  z-index: -1; /* Above video, below content */
+}
+
+
+.btn-blue:hover{
+      background-color: #374253;
+    color: white;
+    border: 1px solid gray;
+}
+.btn-blue{
+    background-color: #0a192f;
+    color: white;
+    border: 1px solid gray;
+}
+/* ========== BASE STYLES (Your Original) ========== */
+.navbar {
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+  height: 60px;
+}
+
+header {
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pseudo-element for blurred background */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url(/src/assets/img/5630939.jpg); */
+  background-size: 400% 400%;
+  animation: gradientMove 50s ease infinite;
+  filter: blur(10px);       /* Adjust blur level */
+  transform: scale(1.1);    /* Prevents edge cutoffs after blur */
+  z-index: -1;              /* Keep it behind the text */
+}
+
+@media (max-width: 768px) {
+  header {
+    margin-top: 5rem;
+  }
+}
+header h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+
+header h2 {
+  font-size: 2.8rem;
+  margin-top: 15px;
+  font-weight: 400;
+  color: #f8f9fa;
+}
+
+.btn-custom {
+  background-color: #ffffff;
+  color: #6a11cb;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 12px 35px;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #f8f9fa;
+  color: #ff0099;
+  transform: scale(1.05);
+}
+
+.progress {
+  background-color: #1f2937;
+  border-radius: 20px;
+}
+
+.progress-bar {
+  border-radius: 20px;
+}
+
+.btn-light {
+  color: #6a11cb;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-light:hover {
+  background-color: #f8f9fa;
+  color: #ff0099;
+}
+
+#contact input, #contact textarea {
+  /* background-color: #1c1c1c; */
+  color: white;
+  border: 1px solid #444;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#contact input:focus, #contact textarea:focus {
+  border-color: #ff0099;
+  box-shadow: 0 0 10px rgba(255, 0, 153, 0.5);
+  outline: none;
+}
+
+.project-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  color: #fff;
+}
+
+.project-card img {
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.project-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.stats-section {
+  position: relative;
+  z-index: 1;
+}
+
+.stat-card {
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+}
+
+.projects-section {
+  padding: 80px 20px;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  header h1 {
+    font-size: 2.8rem;
+  }
+  header h2 {
+    font-size: 1.5rem;
+  }
+  .btn-custom, .btn-light {
+    padding: 10px 28px;
+    font-size: 0.95rem;
+  }
+  .projects-section {
+    padding: 60px 15px;
+  }
+}
+
+/* Large Phones */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 12px;
+  }
+  header {
+    padding: 0 15px;
+  }
+  header h1 {
+    font-size: 2.2rem;
+  }
+  header h2 {
+    font-size: 1.2rem;
+  }
+  .btn-custom, .btn-light {
+    width: 100%;
+    max-width: 280px;
+    display: block;
+    margin: 10px auto;
+  }
+  .project-card {
+    margin-bottom: 20px;
+  }
+  .stats-section {
+    text-align: center;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  header h2 {
+    font-size: 1rem;
+  }
+  .btn-custom, .btn-light {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+  #contact input, #contact textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .projects-section {
+    padding: 40px 12px;
+  }
+}
+
+
+.about-section {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1298px;
+  padding: 60px 20px;
+  width: 90%; /* keeps it fluid */
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .about-section {
+    padding: 50px 20px;
+    max-width: 90%;
+  }
+}
+
+/* Large Phones */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 40px 15px;
+    border-radius: 10px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 30px 12px;
+    margin: 20px auto;
+    border-radius: 8px;
+  }
+}
+
+
+.about-text {
+  font-size: 1.2rem;
+  color: #ddd;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.skills-section {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1298px;
+  padding: 60px 20px;
+  width: 90%; /* makes it fluid */
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .skills-section {
+    padding: 50px 20px;
+    max-width: 90%;
+  }
+}
+
+/* Large Phones */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 40px 15px;
+    border-radius: 10px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 30px 12px;
+    margin: 20px auto;
+    border-radius: 8px;
+  }
+}
+
+
+.contact-section {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1298px;
+  padding: 60px 20px;
+  width: 90%; /* keeps it flexible */
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .contact-section {
+    padding: 50px 20px;
+    max-width: 90%;
+  }
+}
+
+/* Large Phones */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 15px;
+    border-radius: 10px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 30px 12px;
+    margin: 20px auto;
+    border-radius: 8px;
+  }
+}
+
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.glass-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.glass-input::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* Light white for visibility */
+  font-weight: 400;
+}
+
+.glass-input:focus::placeholder {
+  color: rgba(255, 255, 255, 0.8); /* Slightly brighter on focus */
+}
+
+
+
