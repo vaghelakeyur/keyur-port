@@ -1,11 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import LaravelImage from "../../public/laraveldata.png";
 
 const skills = [
   {
     name: "Laravel",
     description:
-      "Gained expertise as a Laravel Developer (Versions 10, 11, and 12) and developed a dynamic restaurant website.",
+      "Gained expertise as a Laravel Developer (Versions 10, 11) and developed a dynamic restaurant And E-Commerce website",
     logo: "https://keyur-v-portfolio.netlify.app/assets/images/skill-image/laraveldata.png",
   },
   {

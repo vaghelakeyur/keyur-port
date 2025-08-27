@@ -1,18 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import ProjectDetails from './pages/ProjectDetails';
-import StatsSection from './components/StatsSection';
-import AOS from 'aos';
-import Loader from './components/Loader';
-import { AnimatePresence } from 'framer-motion';
-import './App.css'; // Make sure your CSS file includes the styles above
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import ProjectDetails from "./pages/ProjectDetails";
+import StatsSection from "./components/StatsSection";
+import AOS from "aos";
+import Loader from "./components/Loader";
+import { AnimatePresence } from "framer-motion";
+import "./App.css"; // Make sure your CSS file includes the styles above
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -33,13 +34,7 @@ function App() {
         ) : (
           <>
             {/* Video Background */}
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="background-video"
-            >
+            <video autoPlay loop muted playsInline className="background-video">
               <source src="/videos/184814-874271896.mp4" type="video/mp4" />
             </video>
 
@@ -54,6 +49,11 @@ function App() {
                 element={
                   <>
                     <Navbar />
+                    <ScrollToTopButton
+                      showAfter={200}
+                      size={50}
+                      corner="left"
+                    />
                     <Hero />
                     <StatsSection />
                     <About />
