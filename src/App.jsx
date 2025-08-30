@@ -7,7 +7,6 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import ProjectDetails from "./pages/ProjectDetails";
 import StatsSection from "./components/StatsSection";
 import AOS from "aos";
 import Loader from "./components/Loader";
@@ -64,7 +63,6 @@ function App() {
                   </>
                 }
               />
-              <Route path="/project/:id" element={<ProjectDetails />} />
             </Routes>
           </>
         )}
