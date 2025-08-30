@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FaThumbsUp } from 'react-icons/fa'; // Hand like icon
 import CRMLogin from "../assets/ProjectImg/crn_login.png";
 import ReportLogin from "../assets/ProjectImg/report_login.png";
 import CowebcastMain from "../assets/ProjectImg/cowebcast_main.png";
+import KYC from "../assets/ProjectImg/generateKYC.png";
+import E_commerceUser from "../assets/ProjectImg/e-storeFront.png";
 
 const projects = [
   {
@@ -24,19 +25,22 @@ const projects = [
     title: 'Annual General Meeting Web Application',
     image: CowebcastMain,
     url: "https://cowebcast.com/newbeta/login.php"
+  },
+  {
+    id: 4,
+    title: 'KYC',
+    image: KYC,
+    url: ""
+  },
+  {
+    id: 5,
+    title: 'E-Commerce Website',
+    image: E_commerceUser,
+    url: ""
   }
 ];
 
 function Projects() {
-  const [likes, setLikes] = useState({}); // Track likes for each project
-
-  const handleLike = (id) => {
-    setLikes((prevLikes) => ({
-      ...prevLikes,
-      [id]: (prevLikes[id] || 0) + 1
-    }));
-  };
-
   return (
     <section
       id="projects"
@@ -97,19 +101,7 @@ function Projects() {
                     </a>
                   )}
 
-                  {/* Buttons in One Row */}
                   <div className="d-flex justify-content-center gap-3">
-                    {/* Like Button */}
-                    <motion.button
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                      onClick={() => handleLike(project.id)}
-                      className="btn btn-outline-primary"
-                    >
-                      <FaThumbsUp className="me-2" /> {likes[project.id] || 0}
-                    </motion.button>
-
-                    {/* View Details Button */}
                     <Link to={`/project/${project.id}`}>
                       <motion.button
                         whileHover={{ scale: 1.1 }}

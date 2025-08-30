@@ -7,6 +7,9 @@ import Report_User from "../assets/ProjectImg/report_user.png";
 import Report_Login from "../assets/ProjectImg/report_login.png";
 import Cowebcast_Login from "../assets/ProjectImg/cowebcast_login.png";
 import Cowebcast_User from "../assets/ProjectImg/cowebcasrUser.png";
+import KYC from "../assets/ProjectImg/generateKYC.png";
+import E_commerceAdmin from "../assets/ProjectImg/e-storeAdmin.png";
+import E_commerceUser from "../assets/ProjectImg/e-storeFront.png";
 
 // ✅ Updated Project Data with Multiple Images
 const projectData = [
@@ -32,10 +35,23 @@ This is a Daily Report Admin Panel developed using HTML5, CSS3, JavaScript, Core
     desc: `A web-based application to manage and generate Annual General Meetings with secure login, meeting scheduling, and document distribution features.
 
 This Annual General Meeting (AGM) application is designed to organize and manage meetings not only within the company but also with external organizations. The meetings are conducted via Google Meet, and all key data is tracked and stored efficiently. The system allows the admin to generate and manage AGMs, send invitations, and track employee participation. It captures essential details such as the participant's email address, joining time, and leaving time, and provides downloadable reports of attendees. The meetings are live-streamed on YouTube, and the recordings are automatically retrieved and shared with the external partner or organizing company for future reference. A user dashboard is also provided, where each user can view complete meeting details, including past and upcoming meetings. The admin panel also keeps a record of the number of shareholders who attended each meeting, storing this information securely in the database. This application helps simplify AGM management by automating scheduling, tracking, recording, and reporting — improving transparency and collaboration with internal and external stakeholders.`,
-    images: [
-      Cowebcast_User,
-      Cowebcast_Login,
-    ],
+    images: [Cowebcast_User, Cowebcast_Login],
+  },
+  {
+    id: 4,
+    title: "KYC",
+    desc: `Developed a KYC application with React.js and Node.js, featuring web scraping for
+company and director details, ISIN data lookup (NSE, BSE, NBFC), and secure data handling
+using MySQL, Puppeteer, and REST APIs.`,
+    images: [KYC],
+  },
+  {
+    id: 5,
+    title: "E-Commerce Website",
+    desc: `This project is a full-fledged e-commerce platform designed for selling garments.
+
+Created an e-commerce website for selling garments with a fully functional user panel (frontend) and admin panel (backend). The system supports two types of users: regular users and administrators, both of whom can log in securely. Administrators can add garments, and these products are instantly visible on the user side. The platform includes product categorization for better organization. Users can browse products, add them to a shopping cart, and place or cancel orders. Additionally, the admin panel displays the number of users currently logged in, providing real-time insights. The overall system ensures a smooth and user-friendly experience with a clear separation between frontend and backend operations.`,
+    images: [E_commerceUser, E_commerceAdmin],
   },
 ];
 
